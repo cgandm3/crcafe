@@ -16,7 +16,7 @@ class CafesController < ApplicationController
       params = {
         'SearchIndex' => 'All',
         'Keywords'=> @keyword,
-        'ResponseGroup' => "ItemAttributes,Images"
+        'ResponseGroup' => "ItemAttributes,Images,Offers"
       }
   ## DEFINES THE REQUEST RETURN
       raw_products = request.item_search(query: params)
