@@ -29,9 +29,11 @@ class CafesController < ApplicationController
 
  @products.each do |product|
   Product.find_or_create_by
-    (img: product ['MediumImage']['URL'], 
+    (mimg: product ['MediumImage']['URL'],
+     limg: product ['LargeImage']['URL'],  
     desc: product['ItemAttributes']['Title'],
-    price: product)['Offers']['Offer']['OfferListing']['Price']['FormattedPrice']
+    feature: product['ItemAttributes']['Feature'],
+    price: product)['Offers']['Offer']['OfferListing']['Price']['ListPrice']['Amount']
   end
 
 end
