@@ -24,7 +24,7 @@ class CafesController < ApplicationController
   ## PUTS SPECIFICS OF HASHED SEARCH RESPONSE INTO AN ARRAY
       @products = hashed_products['ItemSearchResponse']['Items']['Item']
       puts '========='
-      puts @products.inspect
+      puts @products.inspect[0]
       puts '========='
 
   end
