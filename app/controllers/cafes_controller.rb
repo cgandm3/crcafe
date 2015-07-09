@@ -3,7 +3,7 @@ class CafesController < ApplicationController
   ## SHOWS ALL POSTS
   def index
 
-    @keyword = params[:search]
+    # @keyword = params[:search]
   ## VACUUM IS THE GEM USED FOR AMAZON SEARCH API IN RUBY
       request = Vacuum.new('US')
   ## AWS CONFIGURATION. ASSOCIATE_TAG IS A REFERRAL ID IN THE INSTANCE SOMEONE USES MY LINKS
@@ -14,15 +14,18 @@ class CafesController < ApplicationController
       )
 
       params = {
-        'SearchIndex' => 'All',
-        'Keywords'=> @keyword,
-        'ResponseGroup' => "ItemAttributes,Images"
+        'SearchIndex' => 'GourmetFood',
+        'Keywords'=> 'costa rican coffee',
+        'ResponseGroup' => "ItemAttributes,Images,Offers"
       }
   ## DEFINES THE REQUEST RETURN
       raw_products = request.item_search(query: params)
       hashed_products = raw_products.to_h
   ## PUTS SPECIFICS OF HASHED SEARCH RESPONSE INTO AN ARRAY
       @products = hashed_products['ItemSearchResponse']['Items']['Item']
+      puts '========='
+      puts @products.inspect
+      puts '========='
 
   end
   ## THIS ACTION CREATES A POST, ITEMS THAT ARE ASSOCIATED WITH THE POST, AND THE POSTITEM ENTRY.

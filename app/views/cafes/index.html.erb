@@ -14,7 +14,8 @@
          </div>
          <div class="caption">
            <p>
-             <%= link_to truncate(product['ItemAttributes']['Title'], length: 50), product['DetailPageURL'] if product['ItemAttributes']['Title'] %>
+             <%= link_to truncate(product['ItemAttributes']['Title'], length: 1000), product['DetailPageURL'] if product['ItemAttributes']['Title'] %>
+             <%= link_to product['Offers']['Offer']['OfferListing']['Price']['FormattedPrice'], product['DetailPageURL'] if product['Offers']['Offer'] %>
            </p>
            <h5>
              <%#= link_to product['Offers']['Offer']['OfferListing']['Price']['FormattedPrice'], product['DetailPageURL'] if product['Offers']['Offer'] %>
