@@ -27,5 +27,11 @@ class CafesController < ApplicationController
   end
   ## THIS ACTION CREATES A POST, ITEMS THAT ARE ASSOCIATED WITH THE POST, AND THE POSTITEM ENTRY.
 
+ @products.each do |product|
+  Product.find_or_create_by
+    (img: product ['MediumImage']['URL'], 
+    desc: product['ItemAttributes']['Title'],
+    price: product)['Offers']['Offer']['OfferListing']['Price']['FormattedPrice']
+  end
 
 end
