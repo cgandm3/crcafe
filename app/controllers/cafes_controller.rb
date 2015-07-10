@@ -21,22 +21,19 @@ class CafesController < ApplicationController
   ## DEFINES THE REQUEST RETURN
       raw_products = request.item_search(query: params)
       hashed_products = raw_products.to_h
-  ## PUTS SPECIFICS OF HASHED SEARCH RESPONSE INTO AN ARRAY
       @products = hashed_products['ItemSearchResponse']['Items']['Item']
-      puts '========='
-      puts @products.inspect[0]
-      puts '========='
 
-  end
+      # Seed Datebase - One-Time Operation
+      @products.each do |product|
+      Cafe.create([{
+        mimg: product ['MediumImage']['URL'],
+         limg: product ['LargeImage']['URL'],  
+        desc: product['ItemAttributes']['Title'],
+        feature: product['ItemAttributes']['Feature'],
+        price: product['Offers']['Offer']['OfferListing']['Price']['Amount'],
+        fprice: product['Offers']['Offer']['OfferListing']['Price']['FormattedPrice']
+        }])
+        end
+    end
   ## THIS ACTION CREATES A POST, ITEMS THAT ARE ASSOCIATED WITH THE POST, AND THE POSTITEM ENTRY.
-
- @products.each do |product|
-  Product.find_or_create_by
-    (mimg: product ['MediumImage']['URL'],
-     limg: product ['LargeImage']['URL'],  
-    desc: product['ItemAttributes']['Title'],
-    feature: product['ItemAttributes']['Feature'],
-    price: product)['Offers']['Offer']['OfferListing']['Price']['ListPrice']['Amount']
-  end
-
 end
