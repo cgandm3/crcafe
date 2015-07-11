@@ -27,6 +27,10 @@ gem 'figaro', '~> 1.1.1'
 # Enables Amazon product search API in Ruby. 
 gem 'vacuum', '~> 1.3.0'
 
+gem 'omniauth-facebook'
+
+gem 'rspec-rails', '~> 3.2.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
