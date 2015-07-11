@@ -13,8 +13,16 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
 
-.h2 {
-	float: right;
+nav {
+	font-family: 'Rock Salt', cursive;
+}
+
+h2 {
+	font-family: 'Rock Salt', cursive;
+	font-size: 32px;
+	float: left;
+	padding-right: 100px;
 
 }
