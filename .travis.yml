@@ -6,4 +6,4 @@ script: bundle exec rspec
 addons:
   postgresql: "9.3"
 before_script:
-  - psql -c 'create database cafes_test;' -U postgres
+  - psql -c 'create database crcafe_test;' -U postgres
