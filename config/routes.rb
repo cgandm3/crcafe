@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   get 'sessions/show'
 
-  # get 'sessions/create'
+  get 'sessions/create'
 
-  # get 'sessions/destroy'
+  get 'sessions/destroy'
 
   resources :cafes
   # The priority is based upon order of creation: first created -> highest priority.
