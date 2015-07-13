@@ -4,12 +4,9 @@
 <% if @cafes != nil %>
     <div class="container-fluid">
         <div class="row">
-
             <% @cafes.each do |cafe| %>
-                <div class="cafe col-xs-3 thumbnail">
-                     <div class="col-xs-6 col-md-4"></div>
-                    <% if cafe[:mimg] %>
-                       
+                <div class="col-xs-6 col-md-4 thumbnail">
+                    <% if cafe[:mimg] %>         
                             <%= link_to image_tag(cafe[:mimg]), cafe_path(cafe.id)  %>
                             <%= link_to (cafe[:desc]), cafe_path(cafe.id)  %>
                             <%= link_to (cafe[:fprice]), cafe_path(cafe.id)  %>
