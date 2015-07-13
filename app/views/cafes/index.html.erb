@@ -2,19 +2,23 @@
 <%#= render 'search' %>
 
 <% if @cafes != nil %>
-    <div class="row">
-        <% @cafes.each do |cafe| %>
-            <div class="cafe col-xs-3 thumbnail">
-                <% if cafe[:mimg] %>
-                    <div class='cafe-img'>
-                        <%= link_to image_tag(cafe[:mimg,]), cafe_path(cafe.id)  %>
-                        <%= link_to (cafe[:desc,]), cafe_path(cafe.id)  %>
-                        <%= link_to (cafe[:fprice,]), cafe_path(cafe.id)  %>
-                        <% else %>
-                        <img src="https://placehold.it/160?text=no+image" alt="" />
-                    </div>
-                <% end %>
-            </div>
-        <% end %>   
-    </div>
+    <div class="container-fluid">
+        <div class="row">
+
+            <% @cafes.each do |cafe| %>
+                <div class="cafe col-xs-3 thumbnail">
+                     <div class="col-xs-6 col-md-4"></div>
+                    <% if cafe[:mimg] %>
+                       
+                            <%= link_to image_tag(cafe[:mimg]), cafe_path(cafe.id)  %>
+                            <%= link_to (cafe[:desc]), cafe_path(cafe.id)  %>
+                            <%= link_to (cafe[:fprice]), cafe_path(cafe.id)  %>
+                            <% else %>
+                            <img src="https://placehold.it/160?text=no+image" alt="" />
+                        </div>
+                    <% end %>
+                </div>
+           <% end %>  
+        </div>   
+    </div> -->
 <% end %>
