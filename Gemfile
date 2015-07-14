@@ -32,6 +32,8 @@ gem 'rspec', '~> 3.3.0'
 # Pagination
 gem 'will_paginate', '~> 3.0.7'
 
+gem 'rspec', '~> 3.3.0'
+
 gem 'rspec-rails', '~> 3.3.2'
 
 gem 'omniauth-facebook'
