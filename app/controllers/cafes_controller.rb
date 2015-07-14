@@ -5,6 +5,8 @@ class CafesController < ApplicationController
 
     @cafes = Cafe.all
 
+    # @cafes = Cafe.paginate(:page => params[:page])
+
   #   i = 9
   #   while i < 15     
   #   # @keyword = params[:search]
@@ -44,4 +46,10 @@ class CafesController < ApplicationController
   #     end
     end
   ## THIS ACTION CREATES A POST, ITEMS THAT ARE ASSOCIATED WITH THE POST, AND THE POSTITEM ENTRY.
+
+    def show
+      @cafe = Cafe.find(params[:id])
+    end
+
+
 end

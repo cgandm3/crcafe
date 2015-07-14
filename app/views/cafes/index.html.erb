@@ -1,10 +1,13 @@
 <!-- Renders search partial -->
 <%#= render 'search' %>
 
+
 <% if @cafes != nil %>
+
     <div class="container-fluid">
         <div class="row">
             <% @cafes.each do |cafe| %>
+            
                 <div class="col-xs-6 col-md-4 thumbnail cafegrid">
 
                     <% if cafe[:mimg] %>         
@@ -13,10 +16,14 @@
                             <%= link_to (cafe[:fprice]), cafe_path(cafe.id)  %>
                             <% else %>
                             <img src="https://placehold.it/160?text=no+image" alt="" />
+
+                            <%#= will_paginate @cafes %>
                         </div>
                     <% end %>
                 </div>
            <% end %>  
         </div>   
-    </div> -->
+    </div>
 <% end %>
+
+
