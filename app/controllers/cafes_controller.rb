@@ -4,6 +4,8 @@ class CafesController < ApplicationController
   def index
     @cafes = Cafe.all
 
+    @cafes = Cafe.paginate(:page => params[:page])
+
   #   i = 9
   #   while i < 15     
   #   # @keyword = params[:search]
