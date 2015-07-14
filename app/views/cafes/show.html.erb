@@ -1,0 +1,23 @@
+
+<%# raise @cafe.inspect %>
+
+<span> <%= link_to "Back to Coffees", cafes_path  %> </span><br>
+
+<div class="col-md-6 col-md-offset-3">
+	<h3> <%= @cafe.desc %> </h3>
+	<h3> <%= @cafe.fprice %> </h3>
+	<div class="showimage">
+		<%= image_tag(@cafe[:limg]) %>
+	</div>
+	
+	<!--Brings Back Features on Show Page -->
+	<ul>
+		<% cafe = JSON.parse(@cafe.feature) %>
+		<% cafe.each do |x| %>
+			<li> <%= x %> </li>
+		<% end %>
+	</ul>
+
+
+</div>
+
