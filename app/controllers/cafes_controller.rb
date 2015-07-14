@@ -4,8 +4,8 @@ class CafesController < ApplicationController
   def index
     @cafes = Cafe.all
 
-  #   i = 1
-  #   while i < 11     
+  #   i = 9
+  #   while i < 15     
   #   # @keyword = params[:search]
   # ## VACUUM IS THE GEM USED FOR AMAZON SEARCH API IN RUBY
   #     request = Vacuum.new('US')
@@ -18,7 +18,7 @@ class CafesController < ApplicationController
 
   #     params = {
   #       'SearchIndex' => 'GourmetFood',
-  #       'ItemPage' => "2",
+  #       'ItemPage' => i,
   #       'Keywords'=> 'costa rican coffee',
   #       'ResponseGroup' => "ItemAttributes,Images,Offers"
   #     }
@@ -27,18 +27,18 @@ class CafesController < ApplicationController
   #     hashed_products = raw_products.to_h
   #     @products = hashed_products['ItemSearchResponse']['Items']['Item']
   # #     # Seed Datebase - One-Time Operation
-  # #     @products.each do |product|
-  # #     next unless product['Offers']['Offer']
+  #     @products.each do |product|
+  #     next unless product['Offers']['Offer']
       
-  # #     Cafe.create([{
-  # #       mimg: product ['MediumImage']['URL'],
-  # #        limg: product ['LargeImage']['URL'],  
-  # #       desc: product['ItemAttributes']['Title'],
-  # #       feature: product['ItemAttributes']['Feature'],
-  # #       price: product['Offers']['Offer']['OfferListing']['Price']['Amount'],
-  # #       fprice: product['Offers']['Offer']['OfferListing']['Price']['FormattedPrice']
-  # #       }])
-  # #       end
+  #     Cafe.create([{
+  #       mimg: product ['MediumImage']['URL'],
+  #        limg: product ['LargeImage']['URL'],  
+  #       desc: product['ItemAttributes']['Title'],
+  #       feature: product['ItemAttributes']['Feature'],
+  #       price: product['Offers']['Offer']['OfferListing']['Price']['Amount'],
+  #       fprice: product['Offers']['Offer']['OfferListing']['Price']['FormattedPrice']
+  #       }])
+  #       end
   #       i += 1
   #     end
     end
