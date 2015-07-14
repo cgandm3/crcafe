@@ -2,6 +2,7 @@ class CafesController < ApplicationController
 
   # SHOWS ALL POSTS
   def index
+
     @cafes = Cafe.all
 
   #   i = 9

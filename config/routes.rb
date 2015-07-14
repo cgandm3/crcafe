@@ -1,10 +1,32 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/show'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  match '/auth/:provider/callback' => 'sessions#create', via: [:get, :post]
+
+  match '/signout' => 'sessions#destroy', :as => :signout, via: [:get, :post]
+
+  match '/signin' => 'sessions#new', :as => :signin, via: [:get, :post]
+
   resources :cafes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'cafes#index'
+
+  # match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  # match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  # match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+
+  # get   '/login', :to => 'sessions#new', :as => :login
+  # match '/auth/:provider/callback', :to => 'sessions#create'
+  # match '/auth/failure', :to => 'sessions#failure'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

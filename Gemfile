@@ -30,6 +30,10 @@ gem 'vacuum', '~> 1.3.0'
 
 gem 'rspec', '~> 3.3.0'
 
+gem 'omniauth-facebook'
+
+gem 'omniauth'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
