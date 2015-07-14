@@ -32,6 +32,12 @@ gem 'rspec', '~> 3.3.0'
 # Pagination
 gem 'will_paginate', '~> 3.0.7'
 
+gem 'rspec-rails', '~> 3.3.2'
+
+gem 'omniauth-facebook'
+
+gem 'omniauth'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
