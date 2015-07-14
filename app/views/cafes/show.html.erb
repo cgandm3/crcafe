@@ -1,7 +1,7 @@
 
 <%# raise @cafe.inspect %>
 
-<span> <%= link_to "Back to Coffee Search", cafes_path  %> </span>
+<span> <%= link_to "Back to Coffees", cafes_path  %> </span><br>
 
 <div class="col-md-6 col-md-offset-3">
 	<h3> <%= @cafe.desc %> </h3>
@@ -13,7 +13,7 @@
 	<!--Brings Back Features on Show Page -->
 	<ul>
 		<% cafe = JSON.parse(@cafe.feature) %>
-		<%= cafe.each do |x| %>
+		<% cafe.each do |x| %>
 			<li> <%= x %> </li>
 		<% end %>
 	</ul>
