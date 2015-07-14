@@ -30,6 +30,8 @@ gem 'vacuum', '~> 1.3.0'
 
 gem 'rspec', '~> 3.3.0'
 
+gem 'rspec-rails', '~> 3.3.2'
+
 gem 'omniauth-facebook'
 
 gem 'omniauth'
