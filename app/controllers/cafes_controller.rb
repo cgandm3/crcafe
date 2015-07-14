@@ -5,7 +5,7 @@ class CafesController < ApplicationController
 
     @cafes = Cafe.all
 
-    @cafes = Cafe.paginate(:page => params[:page])
+    # @cafes = Cafe.paginate(:page => params[:page])
 
   #   i = 9
   #   while i < 15     
