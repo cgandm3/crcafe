@@ -1,31 +1,21 @@
 <!-- Renders search partial -->
 <%#= render 'search' %>
 
-<% if @products != nil %>
-  <div class="row">
-     <% @products.each do |product| %>
-       <div class="product col-xs-3 thumbnail">
-         <% if product['MediumImage'] %>
-         <div class='product-img'>
-           <%= link_to image_tag(product['MediumImage']['URL']), product['DetailPageURL']  %>
-           <%= link_to image_tag(product['LargeImage']['URL']), product['DetailPageURL']  %>
-           <% else %>
-           <img src="https://placehold.it/160?text=no+image" alt="" />
-           <% end %>
-         </div>
-         <div class="caption">
-           <p>
-             <%= link_to product['ItemAttributes']['Title'], product['DetailPageURL'] if product['ItemAttributes']['Title'] %>
-             <%= link_to product['ItemAttributes']['Feature'], product['DetailPageURL'] if product['ItemAttributes']['Title'] %>
-             <%= link_to product['Offers']['Offer']['OfferListing']['Price']['FormattedPrice'], product['DetailPageURL'] if product['Offers']['Offer'] %>
-             <%= link_to product['Offers']['Offer']['OfferListing']['Price']['Amount'], product['DetailPageURL'] if product['Offers']['Offer'] %>
-           </p>
-           <h5>
-             <%#= link_to product['Offers']['Offer']['OfferListing']['Price']['FormattedPrice'], product['DetailPageURL'] if product['Offers']['Offer'] %>
-           </h5>
-         </div>
-       </div>
-     <% end %>
-   </div>
-   <%#= @products.inspect %>
+<% if @cafes != nil %>
+    <div class="container-fluid">
+        <div class="row">
+            <% @cafes.each do |cafe| %>
+                <div class="col-xs-6 col-md-3 thumbnail">
+                    <% if cafe[:mimg] %>         
+                            <%= link_to image_tag(cafe[:mimg]), cafe_path(cafe.id)  %>
+                            <%= link_to (cafe[:desc]), cafe_path(cafe.id)  %>
+                            <%= link_to (cafe[:fprice]), cafe_path(cafe.id)  %>
+                            <% else %>
+                            <img src="https://placehold.it/160?text=no+image" alt="" />
+                        </div>
+                    <% end %>
+                </div>
+           <% end %>  
+        </div>   
+    </div> -->
 <% end %>
