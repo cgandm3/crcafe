@@ -46,4 +46,10 @@ class CafesController < ApplicationController
   #     end
     end
   ## THIS ACTION CREATES A POST, ITEMS THAT ARE ASSOCIATED WITH THE POST, AND THE POSTITEM ENTRY.
+
+    def show
+      @cafe = Cafe.find(params[:id])
+    end
+
+
 end

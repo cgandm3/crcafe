@@ -1,0 +1,15 @@
+
+<%# raise @cafe.inspect %>
+<div class="col-md-6 col-md-offset-3">
+	<h3><%= @cafe.desc %></h3>
+	<div class="showimage">
+	<%= image_tag(@cafe[:limg]) %>
+	</div>
+	<ul>
+	<%#= @cafe.feature.each do |x|%>
+	<li> <%#= x %> </li>
+
+	<%# end %>
+	</ul>
+</div>
+
