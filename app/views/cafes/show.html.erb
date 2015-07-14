@@ -6,10 +6,11 @@
 	<%= image_tag(@cafe[:limg]) %>
 	</div>
 	<ul>
-	<%#= @cafe.feature.each do |x|%>
-	<li> <%#= x %> </li>
+	<% cafe = JSON.parse(@cafe.feature) %>
+	<%= cafe.each do |x|%>
+	<li> <%= x %> </li>
 
-	<%# end %>
+	<% end %>
 	</ul>
 </div>
 
