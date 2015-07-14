@@ -5,7 +5,8 @@
     <div class="container-fluid">
         <div class="row">
             <% @cafes.each do |cafe| %>
-                <div class="col-xs-6 col-md-3 thumbnail">
+                <div class="col-xs-6 col-md-4 thumbnail cafegrid">
+
                     <% if cafe[:mimg] %>         
                             <%= link_to image_tag(cafe[:mimg]), cafe_path(cafe.id)  %>
                             <%= link_to (cafe[:desc]), cafe_path(cafe.id)  %>
