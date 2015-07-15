@@ -4,6 +4,7 @@
 	<!-- <button type="button" class="btn btn-default"><%= submit_tag "Submit" %></button> -->
 <%# end %>
 
+<!-- Partial for Elastic Search -->
 <%= form_tag cafes_path, :method => :get do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
