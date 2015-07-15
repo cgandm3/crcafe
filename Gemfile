@@ -28,7 +28,6 @@ gem 'figaro', '~> 1.1.1'
 # Enables Amazon product search API in Ruby. 
 gem 'vacuum', '~> 1.3.0'
 
-gem 'rspec', '~> 3.3.0'
 # Pagination
 gem 'will_paginate', '~> 3.0.7'
 
@@ -42,6 +41,7 @@ gem 'omniauth'
 
 gem 'searchkick'
 
+gem 'mechanize'
 
 
 # Use ActiveModel has_secure_password
