@@ -1,5 +1,12 @@
 <!-- Partial with simple search  -->
-<%= form_tag cafes_path, method: :get do %>
-	<%= text_field_tag :search, nil, placeholder: 'Search' %>
-	<button type="button" class="btn btn-default"><%= submit_tag "Submit" %></button>
+<%#= form_tag cafes_path, method: :get do %>
+	<%#= text_field_tag :search, nil, placeholder: 'Search' %>
+	<!-- <button type="button" class="btn btn-default"><%= submit_tag "Submit" %></button> -->
+<%# end %>
+
+<!-- Partial for Elastic Search -->
+<%= form_tag cafes_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search the App Store", :name => nil %>
 <% end %>
