@@ -8,21 +8,29 @@
 
     <div class="container-fluid">
         <div class="row">
-
+            
+            <% clear_counter = 0 %>
+            
             <% @cafes.each do |cafe| %>
             
                 <div class="col-xs-6 col-md-4 thumbnail cafegrid">
 
                     <% if cafe[:mimg] %>         
-                            <%= link_to image_tag(cafe[:mimg]), cafe_path(cafe.id)  %>
-                            <%= link_to (cafe[:desc]), cafe_path(cafe.id)  %>
-                            <%= link_to (cafe[:fprice]), cafe_path(cafe.id)  %>
-                            <% else %>
-                            <img src="https://placehold.it/160?text=no+image" alt="" />
+                        <%= link_to image_tag(cafe[:mimg]), cafe_path(cafe.id)  %>
+                        <%= link_to (cafe[:desc]), cafe_path(cafe.id)  %>
+                        <%= link_to (cafe[:fprice]), cafe_path(cafe.id)  %>
+                    <% else %>
+                        <img src="https://placehold.it/160?text=no+image" alt="" />
     
                         </div>
                     <% end %>
                 </div>
+                <% if clear_counter > 1 %>
+                   <% clear_counter = 0 %>
+                    <div class="clearfix"> </div>
+                <% else %> 
+                    <% clear_counter ++ %>
+                <% end %>
            <% end %>  
         </div>   
     </div>
