@@ -1,31 +1,29 @@
-<!-- Renders search partial -->
-<%#= render 'search' %>
 
 <% if @cafes != nil %>
-    
-   <!--  <div class="paginate"> <%#= will_paginate @cafes %>  -->
-    </div>
 
+    <!-- Pagination -->
+    <!-- <div class="paginate"> <%#= will_paginate @cafes %> </div> -->
+
+    <!-- Creates Container and rows for Cafes -->
     <div class="container-fluid">
         <div class="row">
-
+            <!-- Loops through cafes -->
             <% @cafes.each do |cafe| %>
-            
-                <div class="col-xs-6 col-md-4 thumbnail cafegrid">
 
+                <div class="col-xs-6 col-md-4 thumbnail cafegrid">
+                    <!-- Allows Cafes to link using DB -->
                     <% if cafe[:mimg] %>         
-                            <%= link_to image_tag(cafe[:mimg]), cafe_path(cafe.id)  %>
-                            <%= link_to (cafe[:desc]), cafe_path(cafe.id)  %>
-                            <%= link_to (cafe[:fprice]), cafe_path(cafe.id)  %>
-                            <% else %>
-                            <img src="https://placehold.it/160?text=no+image" alt="" />
-    
-                        </div>
+                        <%= link_to image_tag(cafe[:mimg]), cafe_path(cafe.id)  %>
+                        <%= link_to (cafe[:desc]), cafe_path(cafe.id)  %>
+                        <%= link_to (cafe[:fprice]), cafe_path(cafe.id)  %>
+                    <% else %>
+                        <img src="https://placehold.it/160?text=no+image" alt="" />
                     <% end %>
-                </div>
-           <% end %>  
-        </div>   
-    </div>
+                </div>   
+            <% end %>     
+        </div>     
+    </div>   
 <% end %>
+
 
 
