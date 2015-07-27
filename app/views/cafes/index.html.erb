@@ -13,9 +13,11 @@
                 <div class="col-xs-6 col-md-4 thumbnail cafegrid">
                     <!-- Allows Cafes to link using DB -->
                     <% if cafe[:mimg] %>         
-                        <%= link_to image_tag(cafe[:mimg]), cafe_path(cafe.id)  %>
-                        <%= link_to (cafe[:desc]), cafe_path(cafe.id)  %>
-                        <%= link_to (cafe[:fprice]), cafe_path(cafe.id)  %>
+                       <div class="mimg"> 
+                        <%= link_to image_tag(cafe[:mimg]), cafe_path(cafe.id) %> </div>
+                        <div class="desc"> 
+                        <%= link_to (cafe[:desc]), cafe_path(cafe.id)  %> 
+                        <%= link_to (cafe[:fprice]), cafe_path(cafe.id)  %> </div>
                     <% else %>
                         <img src="https://placehold.it/160?text=no+image" alt="" />
                     <% end %>

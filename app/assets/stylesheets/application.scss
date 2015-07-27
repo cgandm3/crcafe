@@ -45,8 +45,22 @@ span {
 .showimage {
 	padding-left: 8%;
 }
+.row {
+	border-top: 1px solid #f4f4f4;
+	border-bottom: 1px solid #f4f4f4;
+}
+.col-xs-6, .col-md-4 {
+	border: none;
+}
 .cafegrid {
-	height: 100%;
+	height: 235px;
+	padding: 8px;
+}
+.mimg {
+	padding: 10px;
+}
+.desc {
+	padding: 10px;
 }
 /*.paginate {
 	font-family: 'Rock Salt', cursive;
