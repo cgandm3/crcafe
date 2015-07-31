@@ -3,7 +3,9 @@
   	<h2>Costa Rica Cafe</h2><br>
     <br>
     <br>
-  	<span> <%= render 'search'%> </span>
+    
+  	
+    <span> <%= render 'search'%> </span>
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -34,15 +36,23 @@
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
+
     <!-- omniauth -->
     <div id="user-widget">
-      <% if current_user %>
+
+      <% if current_user %> 
+        <%= link_to "Home", root_path %>
+        <%= link_to "Shop", cafes_path %>
+      
         Hello, <strong><%= current_user.name %></strong>!
         <%= link_to "Sign out", signout_path, id: "sign_out" %>
       <% else %>
+        <%= link_to "Home", root_path %>
+        <%= link_to "Shop", cafes_path %>
         <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
       <% end %>
     </div>
+
   </div><!-- /.container-fluid -->
 </nav>
 
