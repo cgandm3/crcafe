@@ -1,3 +1,27 @@
-<h1>Cart#index</h1>
-<p>Find me in app/views/cart/index.html.erb</p>
+<h1>Your Cart</h1>
 
+<br><br><br>
+
+<% total = 0 %>
+
+<ul>
+	<% @cart.each do | id, quantity | %>
+		<% cafe = Cafe.find_by_id(id) %>
+
+	<li>
+		<p> <%= link_to image_tag(cafe[:mimg]) %> </p>
+		<p> <%= cafe.desc %> </p>
+		<%= number_with_precision(cafe.fprice, precision: 2) %>
+		<!-- <p> <%#= number_to_currency(cafe.price, :unit => '$') %> </p> -->
+		<p> Quantity: <%= quantity %> </p>
+	</li>
+		<% total += quantity * (cafe.price / 100) %>
+	<% end %>
+
+	<% if total > 0 %>
+		<p><b> <%= number_to_currency(total, :unit => '$', :precision => 2) %> </b></p>
+	<% end %>
+
+</ul>
+
+<%= link_to 'Empty Your Cart', cart_clear_path %>

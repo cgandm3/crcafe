@@ -18,6 +18,8 @@
                         <div class="desc"> 
                         <%= link_to (cafe[:desc]), cafe_path(cafe.id)  %> 
                         <%= link_to (cafe[:fprice]), cafe_path(cafe.id)  %> </div>
+                        <div class="addtocart">
+                        <a href="/cart/<%= cafe.id %>"> Add to Cart </a> </div>
                     <% else %>
                         <img src="https://placehold.it/160?text=no+image" alt="" />
                     <% end %>

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'page#home'
 
-  get 'cart/index'
+  get '/cart' => 'cart#index'
+  get '/cart/clear' => 'cart#clearCart'
+  get '/cart/:id' => 'cart#add'
 
   get 'sessions/new'
 
