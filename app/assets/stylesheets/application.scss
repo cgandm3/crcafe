@@ -13,13 +13,11 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
 
 body {
 	margin: 10px;
-
 }
-
 nav {
 	font-family: 'Rock Salt', cursive;
 	padding: 15px;
@@ -47,6 +45,38 @@ span {
 .showimage {
 	padding-left: 8%;
 }
-.cafegrid {
-	max-height: 210px;
+.row {
+	border-top: 1px solid #f4f4f4;
+	border-bottom: 1px solid #f4f4f4;
 }
+.col-xs-6, .col-md-4 {
+	border: none;
+}
+.cafegrid {
+	height: 241px;
+	padding: 8px;
+}
+.mimg {
+	padding: 10px;
+}
+.desc {
+	padding: 0px;
+}
+#page_nav a{
+	padding: 0 20px 0 20px;
+	font-size: 20px;
+}
+#user-widget a{
+	padding: 0 15px 0 15px;
+}
+.pic img{
+	width: 1287px;
+}
+.addtocart {
+
+}
+/*.paginate {
+	font-family: 'Rock Salt', cursive;
+	letter-spacing: 5px;
+
+}*/
