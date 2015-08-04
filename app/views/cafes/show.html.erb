@@ -2,10 +2,14 @@
 
 <span> <%= link_to "Back to Costa Rica Cafe", cafes_path  %> </span> <br>
 
+
 <!-- Show Page Description and Feature Price -->
 <div class="col-md-6 col-md-offset-3">
 	<h3> <%= @cafe.desc %> </h3>
 	<h3> <%= @cafe.fprice %> </h3>
+
+	<div id="addtocart">
+	<a href="/cart/<%= @cafe.id %>"> Add to Cart </a> </div>
 	
 	<!-- Bring Back Show Page Large Images -->
 	<div class="showimage">

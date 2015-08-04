@@ -3,7 +3,7 @@ class CartController < ApplicationController
   	id = params[:id]
   	# if the cart has already been created, use the existing cart else create a new cart
   	if session[:cart] then
-  		cart = session [:cart]
+  		cart = session[:cart]
   	else
   		session[:cart] = {}
   		cart = session[:cart]

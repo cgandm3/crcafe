@@ -24,6 +24,10 @@ nav {
 	padding-top: 18px;
 	font-size: 16px;
 }
+h1 {
+    font-size: 36px;
+    padding-top: 20px;
+}
 
 h2 {
 	font-family: 'Rock Salt', cursive;
@@ -44,6 +48,7 @@ span {
 }
 .showimage {
 	padding-left: 8%;
+	padding-top: 22px;
 }
 .row {
 	border-top: 1px solid #f4f4f4;
@@ -72,11 +77,22 @@ span {
 .pic img{
 	width: 100%;
 }
-.addtocart {
-
-}
-/*.paginate {
+.cart {
 	font-family: 'Rock Salt', cursive;
-	letter-spacing: 5px;
-
-}*/
+	font-size: 28px;
+	padding-right: 35px;
+	color: #32CD32;
+	padding: 0 15px 0 24px;
+}
+#emptycart a {
+	font-family: 'Rock Salt', cursive;
+	font-size: 20px;
+	padding-right: 35px;
+	padding: 0 15px 0 24px;
+}
+#addtocart a{
+	font-family: 'Rock Salt', cursive;
+	font-size: 20px;
+	padding-right: 35px;
+	padding-bottom: 2px;
+}
